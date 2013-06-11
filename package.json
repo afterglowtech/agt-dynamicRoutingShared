@@ -1,0 +1,28 @@
+{
+  "name": "agt-dynamicRoutingShared",
+  "description": "Javascript AMD Modules shared by Afterglow Technology dynamic routing projects",
+  "version": "0.0.1",
+  "homepage": "https://github.com/afterglowtech/agt-dynamicRoutingShared",
+  "author": {
+    "name": "Stu Salsbury",
+    "url": "https://github.com/stu-salsbury"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/afterglowtech/agt-dynamicRoutingShared.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/afterglowtech/agt-dynamicRoutingShared/blob/master/LICENSE"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-uglify": "~0.1.2",
+    "grunt-contrib-concat": "~0.1.3"
+  }
+}

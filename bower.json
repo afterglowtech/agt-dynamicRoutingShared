@@ -1,0 +1,25 @@
+{
+  "name": "agt-dynamicRoutingShared",
+  "version": "0.0.1",
+  "main": [
+    "dist/common.js",
+    "dist/StateBase.js",
+    "dist/UrlMatcher.js"
+  ],
+  "description": "Javascript AMD Modules shared by Afterglow Technology dynamic routing projects",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/afterglowtech/agt-dynamicRoutingShared.git"
+  },
+  "ignore": [
+    "src",
+    "*.js",
+    "*.jshintrc",
+    "*.gitignore",
+    "package.json"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
