@@ -1,0 +1,6 @@
+@doc module
+@name dynamicRoutingShared
+@description A collection of AMD modules that are used throughout
+Afterglow Technolology software for dynamic website routing, notably
+angular-couchPotato, angular-detour and agt-backseatDriver.
+

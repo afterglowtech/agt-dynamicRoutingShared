@@ -1,6 +1,28 @@
+/**
+ * @doc module
+ * @name common
+ * @description AMD module returns an instance of
+ * {@link common.class:Common Common}.
+ */
 define([], function() {
+  /**
+   * @doc function
+   * @name common.class:Common
+   * @description This class should be replaced with lodash.
+   */
   function Common() {
+     /**
+     * @doc method
+     * @name common.class:Common#isDefined
+     * @methodOf common.class:Common
+     * @param {object} value Any javascript variable reference.
+     * This is the configuration which includes the groups of docs to parse
+     * @returns {boolean} if typeof value !== 'undefined', returns true.
+     * Otherwise, returns false.
+     * @description Tests where a javascript variable reference is defined.
+     */
     this.isDefined = function(value){return typeof value !== 'undefined';};
+
     function isFunction(value){return typeof value === 'function';}
     this.isFunction = isFunction;
 

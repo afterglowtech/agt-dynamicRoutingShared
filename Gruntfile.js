@@ -4,10 +4,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-docular');
 
   grunt.registerTask('default', ['build']);
   grunt.registerTask('build', ['jshint', 'clean', 'concat']);
-  grunt.registerTask('release', ['build','uglify']);
+  grunt.registerTask('release', ['build','uglify', 'docular']);
 
   grunt.registerTask('timestamp', function() {
     grunt.log.subhead(Date());
@@ -24,6 +25,31 @@ module.exports = function(grunt) {
       }
     },
     pkg: grunt.file.readJSON('package.json'),
+    docular: {
+      groups: [
+        {
+          groupTitle: 'agt-dynamicRoutingShared',
+          groupId: 'dynamicRoutingShared',
+          groupIcon: 'icon-book',
+          showSource: true,
+          sections: [
+            {
+              id: 'api',
+              title: 'API',
+              docs: [
+                './docs/section-api.doc'
+              ],
+              scripts: [
+                './src/common.js'
+              ],
+              rank: {}
+            }
+          ]
+        }
+      ]
+//      showDocularDocs: false,
+ //     showAngularDocs: false
+    },
     banner:
       '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
       '<%= pkg.homepage ? " * " + pkg.homepage + "\\n" : "" %>' +
