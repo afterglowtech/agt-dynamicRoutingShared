@@ -5,4 +5,7 @@ DOC_DATA=[
 {"filename":"src\\common.js","contentURL":"/documentation/docular-source/dynamicRoutingShared/api/._src_common.js.txt"}},
 {"section":"api","group":"dynamicRoutingShared","id":"common","name":false,"shortName":"common","docType":"module","module":"common","moduleSection":"","moduleItem":"","moduleSubItem":"","keywords":"amd an class common instance module of returns","codeBlocks":[
 {"lineStart":1,"lineEnd":5}],"source":
-{"filename":"src\\common.js","contentURL":"/documentation/docular-source/dynamicRoutingShared/api/._src_common.js.txt"}}];
+{"filename":"src\\common.js","contentURL":"/documentation/docular-source/dynamicRoutingShared/api/._src_common.js.txt"}},
+{"section":"api","group":"dynamicRoutingShared","id":"index","name":false,"shortName":"index","docType":"overview","module":"index","moduleSection":"","moduleItem":"","moduleSubItem":"","keywords":"api index is overview reference the this","codeBlocks":[
+{"lineStart":1,"lineEnd":3}],"source":
+{"filename":"docs\\section-api.doc","contentURL":"/documentation/docular-source/dynamicRoutingShared/api/._docs_section-api.doc.txt"}}];

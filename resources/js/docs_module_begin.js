@@ -524,14 +524,13 @@ docsApp.controller.DocsController = function($scope, $location, $window, $cookie
 
                 $scope.currentPage = page;
 
-                $scope.currentSource = {
-                    source: $scope.currentPage.source,
-                    codeBlocks: $scope.currentPage.codeBlocks
-                };
-
                 if (!$scope.currentPage) {
                     $scope.partialTitle = 'Error: Page Not Found!';
                 } else {
+                    $scope.currentSource = {
+                        source: $scope.currentPage.source,
+                        codeBlocks: $scope.currentPage.codeBlocks
+                    };
 
                     //lets expose additional data into the $scope so extensions can take advanatage of it
                     $scope.sectionInfo = sections.groupMap[groupId].sections[sectionId];
