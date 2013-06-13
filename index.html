@@ -87,7 +87,11 @@
 
             addTag('link', {rel: 'stylesheet', href: path('resources/css/bootstrap.min.css'), type: 'text/css'});
             addTag('link', {rel: 'stylesheet', href: path('resources/css/font-awesome.css'), type: 'text/css'});
-//            addTag('link', {rel: 'stylesheet', href: '//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css', type: 'text/css'});
+            // addTag('link', {rel: 'stylesheet', href: '//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css', type: 'text/css'});
+            // addTag('link', {rel: 'stylesheet', href: '//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css', type: 'text/css'});
+
+            addTag('link', {rel: 'stylesheet', href: path('resources/css/prettify.css'), type: 'text/css'});
+
 
             addTag('link', {rel: 'stylesheet', href: path('resources/css/docular.css'), type: 'text/css'});
 
@@ -112,7 +116,7 @@
             addTag('script', {src: path('resources/angular/angular-cookies.js') }, sync);
             addTag('script', {src: path('resources/angular/angular-sanitize.js') }, sync);
             addTag('script', {src: path('resources/angular/ui-bootstrap-0.3.0.min.js') }, sync);
-//            addTag('script', {src: path('resources/angular/angular-bootstrap-prettify.js') }, sync);
+            addTag('script', {src: path('resources/angular/angular-bootstrap-prettify.min.js') }, sync);
 
 
             /*============ DEFINE THE APPLICATION MODULE =============*/
@@ -205,7 +209,7 @@
                         <input type="text" ng-model="search" placeholder="search the docs" tabindex="1" accesskey="s" class="input-medium search-query" focused="focused">
                         <ul class="dropdown-menu" focused="focused">
                             <li focused="focused">
-                                <a focused="focused" href="#/{{bestMatch.page.url}}">{{bestMatch.page.shortName}}</a>
+                                <a focused="focused" href="{{bestMatch.page.url}}">{{bestMatch.page.shortName}}</a>
                             </li>
                         </ul>
                     </div>
@@ -217,7 +221,7 @@
                     <div class="overview-items" ng-show="pages.length">
                         <ul class="nav nav-list" ng-hide="page">
                             <li ng-repeat="page in pages" ng-class="navClass(page)">
-                                <a href="#/{{page.url}}" tabindex="2">{{page.shortName}}</a>
+                                <a href="{{page.url}}" tabindex="2">{{page.shortName}}</a>
                             </li>
                         </ul>
                     </div>
@@ -237,10 +241,10 @@
                         <span ng-repeat="section in module.sections | orderBy:'order'" class="module-section {{module.visible}}">
                             <li class="nav-header section">
                                 <span class="section-count">{{section.pages.length}}</span>
-                                <a href="#/{{section.link}}" class="guide">{{section.name}}</a>
+                                <a href="{{section.link}}" class="guide">{{section.name}}</a>
                             </li>
                             <li ng-repeat="page in section.pages" ng-class="navClass(page)" class="doc-listing">
-                                <a href="#/{{page.url}}" tabindex="2">{{page.shortName}}</a>
+                                <a href="{{page.url}}" tabindex="2">{{page.shortName}}</a>
                             </li>
                         </span>
 

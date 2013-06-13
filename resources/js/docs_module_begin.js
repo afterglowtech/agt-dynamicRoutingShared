@@ -651,12 +651,12 @@ docsApp.controller.DocsController = function($scope, $location, $window, $cookie
                 moduleSectionInfoMap[group][thisSection.id] = {};
 
                 //first check for a link to the definition of "module"
-                moduleSectionInfoMap[group][thisSection.id]["module"] = {link:LAYOUT_DATA[thisDocAPI].layout.module.link || "#"};
+                moduleSectionInfoMap[group][thisSection.id]["module"] = {link:LAYOUT_DATA[thisDocAPI].layout.module.link}; // || "#"};
 
                 //next look for links for the definition of each "section" (they can be absoulte or relative to the root of the webapp)
                 for(var modSection in LAYOUT_DATA[thisDocAPI].layout.sections){
                     moduleSectionInfoMap[group][thisSection.id][modSection] = {};
-                    moduleSectionInfoMap[group][thisSection.id][modSection].link = LAYOUT_DATA[thisDocAPI].layout.sections[modSection].link || "#";
+                    moduleSectionInfoMap[group][thisSection.id][modSection].link = LAYOUT_DATA[thisDocAPI].layout.sections[modSection].link; // || "#";
                     moduleSectionInfoMap[group][thisSection.id][modSection].order = LAYOUT_DATA[thisDocAPI].layout.sections[modSection].order || 99999999;
                 }
             }
@@ -717,7 +717,7 @@ docsApp.controller.DocsController = function($scope, $location, $window, $cookie
     }
 
     function getModuleSectionLink(page, modSection) {
-        return moduleSectionInfoMap[page.group][page.section][modSection].link;
+        return moduleSectionInfoMap[page.group][page.section][modSection].link || 'javascript:void(0)';
     }
     function getModuleSectionOrder(page, modSection) {
         return moduleSectionInfoMap[page.group][page.section][modSection].order;
